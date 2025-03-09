@@ -31,8 +31,7 @@ public class B6 {
             }
         } while (mainChoice != 3);
     }
-
-    // MENU XỬ LÝ CHUỖI
+    
     static void handleStringMenu() {
         int choice;
         do {
@@ -96,7 +95,6 @@ public class B6 {
         return result.toString().trim();
     }
 
-    // MENU XỬ LÝ SỐ NGUYÊN
     static void handleIntegerMenu() {
         int choice;
         do {
