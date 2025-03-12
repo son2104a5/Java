@@ -49,7 +49,6 @@ public class Fraction {
         int gcd = gcd(Math.abs(numerator), Math.abs(denominator));
         numerator /= gcd;
         denominator /= gcd;
-        // chuẩn hóa dấu âm ở tử số
         if (denominator < 0) {
             numerator *= -1;
             denominator *= -1;
