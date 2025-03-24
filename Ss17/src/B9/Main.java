@@ -12,7 +12,7 @@ public class Main {
         manager.addBook(new Book("B002", "Python Basics", "Alice Smith", 2021));
         manager.addBook(new Book("B003", "Data Structures", "Bob Johnson", 2018));
         manager.addBook(new Book("B004", "Web Development", "Charlie Brown", 2020));
-        manager.addBook(new Book("B002", "Duplicate Book", "Someone", 2023)); // Sách trùng ID sẽ không thêm
+        manager.addBook(new Book("B002", "Duplicate Book", "Someone", 2023));
 
         System.out.print("Nhập năm để lọc các sách xuất bản sau năm đó: ");
         int year = Integer.parseInt(sc.nextLine());
