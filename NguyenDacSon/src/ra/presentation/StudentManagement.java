@@ -9,7 +9,6 @@ public class StudentManagement {
         Scanner sc = new Scanner(System.in);
 
         Map<String, Student> students = new HashMap<String, Student>();
-        List<Student> studentList = new ArrayList<Student>();
         do {
             displayMenu();
             int choice = Integer.parseInt(sc.nextLine());
@@ -33,11 +32,27 @@ public class StudentManagement {
                         int age = Integer.parseInt(sc.nextLine());
 
                         System.out.print("Nhập điểm tb: ");
+                        Float avg = Float.parseFloat(sc.nextLine());
+                        students.put(id, new Student(id, name, age, avg));
+                        System.out.println("***********************************");
                     }
                     break;
                 case 3:
+                    System.out.print("Nhập mã sinh viên cần xóa: ");
+                    String idDelete = sc.nextLine();
+
+                    if (students.containsKey(idDelete)) {
+                        students.remove(idDelete);
+                    } else System.out.println("Id không tồn tại");
                     break;
                 case 4:
+                    Float total = 0f;
+
+                    for (Map.Entry<String, Student> entry : students.entrySet()) {
+                        total = total + entry.getValue().getAvg();
+                    }
+                    total = total/students.size();
+                    System.out.println("Tổng điểm: " + total);
                     break;
                 case 5:
                     break;
