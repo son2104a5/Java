@@ -1,0 +1,2 @@
+Đây là nội dung của file input.txt.
+Dữ liệu sẽ được sao chép sang copy.txt
